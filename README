@@ -1,0 +1,98 @@
+README.md 
+
+# JANGO Bot - Automated Crypto Trading Bot
+
+JANGO Bot is a **high-frequency automated trading bot** with **real-time market analysis, liquidity tracking, and AI-powered trading strategies**. It supports **Ethereum, Binance Smart Chain (BSC), and Solana**, featuring **auto-buy/sell, rug-pull detection, stop-loss, take-profit, and Telegram/Discord alerts** for secure and efficient trading.
+
+## 🚀 Features
+
+### 🏦 **Trading & Automation**
+- ✅ **Auto-Buy & Auto-Sell** (Instant execution with gas optimization)
+- ✅ **Sniping Bot** (Fast token purchases on new listings)
+- ✅ **Stop-Loss & Take-Profit Automation** (Smart trading strategies)
+- ✅ **Liquidity Tracking & Rug-Pull Detection** (Auto-sell if a scam is detected)
+- ✅ **Multi-Chain Support** (Ethereum, Binance Smart Chain, Solana)
+
+### 🔒 **Security & Wallet Management**
+- ✅ **Secure API & Private Key Encryption**
+- ✅ **Multi-Wallet Support**
+- ✅ **Prevents Buying Scam Tokens**
+- ✅ **Telegram & Discord Alerts** (Trade notifications & market updates)
+
+### 📊 **Trading Modes**
+- 🎮 **Demo Mode**: Simulated trading (no real funds used)
+- 🚀 **Live Trading Mode**: Executes real trades on the blockchain
+
+## 📌 Installation & Setup
+
+### **1️⃣ Clone the Repository**
+```bash
+ git clone https://github.com/your-username/your-repo-name.git
+ cd jango-bot
+```
+
+### **2️⃣ Install Dependencies**
+```bash
+npm install
+```
+
+### **3️⃣ Configure Environment Variables**
+Create a `.env` file in the root directory and add the following:
+```env
+API_KEY=your-api-key
+PRIVATE_KEY=your-private-wallet-key
+TELEGRAM_BOT_TOKEN=your-telegram-bot-token
+```
+
+### **4️⃣ Start the Bot**
+- **Demo Mode:**
+```bash
+node jango.js --demo
+```
+- **Live Trading Mode:**
+```bash
+node jango.js --live
+```
+
+## 🛠 Deployment (PM2 for Continuous Running)
+To keep the bot running on a server:
+```bash
+pm install -g pm2
+pm2 start jango.js --name jango-bot -- --live
+pm2 save
+pm2 startup
+```
+
+## 🖥 Web Interface (Frontend)
+If you are using the frontend interface:
+```bash
+cd jango-front
+npm install
+npm start
+```
+
+## 🔗 API Endpoints
+JANGO Bot provides REST API endpoints for automation:
+```http
+GET /api/trades  # Fetch trade history
+POST /api/buy  # Execute a buy order
+POST /api/sell  # Execute a sell order
+```
+
+## 🛡 Security Considerations
+- **Use a secure VPS or dedicated machine** for deployment.
+- **Never expose your private keys** in public repositories.
+- **Enable firewall rules** to protect your API endpoints.
+
+## 📢 Community & Support
+For updates, join the Telegram or Discord channels.
+
+## 💡 Contributions
+We welcome contributions! Fork the repo, create a feature branch, and submit a pull request.
+
+## 📜 License
+This project is licensed under the MIT License - see the `LICENSE` file for details.
+
+---
+🚀 **JANGO Bot - The Future of Automated Trading**
+
