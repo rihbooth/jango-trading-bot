@@ -11,7 +11,6 @@
     "url": "git+https://github.com/rihbooth/jango-trading-bot.git"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rihbooth/jango-trading-bot/issues"
@@ -19,5 +18,8 @@
   "homepage": "https://github.com/rihbooth/jango-trading-bot#readme",
   "dependencies": {
     "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "mocha": "^11.1.0"
   }
 }
