@@ -29,7 +29,4 @@ jobs:
         run: eslint -v
 
       - name: Run ESLint
-        run: eslint . --ext .js,.jsx,.ts,.tsx
-
-    env:
-      ACTIONS_RUNNER_DEBUG: true
+        run: eslint .
