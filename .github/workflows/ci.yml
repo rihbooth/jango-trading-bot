@@ -22,11 +22,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install ESLint globally
+        run: npm install -g eslint
+
       - name: Verify ESLint installation
-        run: npx eslint -v
+        run: eslint -v
 
       - name: Run ESLint
-        run: npx eslint . --ext .js,.jsx,.ts,.tsx
+        run: eslint . --ext .js,.jsx,.ts,.tsx
 
     env:
       ACTIONS_RUNNER_DEBUG: true
