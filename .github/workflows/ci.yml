@@ -28,5 +28,8 @@ jobs:
       - name: Verify ESLint installation
         run: eslint -v
 
+      - name: List files in the root directory
+        run: ls -la
+
       - name: Run ESLint
         run: eslint .
