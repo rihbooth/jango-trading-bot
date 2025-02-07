@@ -1,6 +1,12 @@
-name: CI
+name: CI Workflow
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
@@ -8,13 +14,13 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [14, 16, 18]
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
@@ -22,14 +28,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install ESLint globally
-        run: npm install -g eslint
+      - name: Lint code
+        run: npm run lint
 
-      - name: Verify ESLint installation
-        run: eslint -v
-
-      - name: List files in the root directory
-        run: ls -la
-
-      - name: Run ESLint
-        run: eslint .
+      - name: Run tests
+        run: npm test
