@@ -1,0 +1,31 @@
+{
+  "name": "jango-trading-bot",
+  "version": "1.0.0",
+  "description": "A crypto trading bot with an admin panel using XUIONE.",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12",
+    "morgan": "^1.10.0",
+    "winston": "^3.3.3",
+    "socket.io": "^4.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "jest": "^27.3.1",
+    "nodemon": "^2.0.15"
+  },
+  "author": "Your Name",
+  "license": "ISC"
+}
