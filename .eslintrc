@@ -1,12 +1,14 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "node": true
   },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -21,8 +23,11 @@
     "@typescript-eslint"
   ],
   "rules": {
-    "no-unused-vars": "warn",
-    "no-console": "off",
-    "no-nullish-coalescing-operator": "error"
+    "quotes": ["error", "double"]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }

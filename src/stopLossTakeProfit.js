@@ -4,7 +4,7 @@ async function manageTrade(tradeDetails) {
         // Implement stop-loss and take-profit logic based on trade details
         return { success: true, token: tradeDetails.token };
     } catch (error) {
-        console.error('Trade management error:', error);
+        console.error("Trade management error:", error);
         return { success: false, error };
     }
 }

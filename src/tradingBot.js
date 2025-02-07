@@ -1,6 +1,6 @@
-const Binance = require('node-binance-api');
-const dotenv = require('dotenv');
-const logger = require('./logger');
+const Binance = require("node-binance-api");
+const dotenv = require("dotenv");
+const logger = require("./logger");
 
 dotenv.config();
 
@@ -9,8 +9,8 @@ const binance = new Binance().options({
   APISECRET: process.env.BINANCE_API_SECRET
 });
 
-const SYMBOL = 'BTCUSDT';
-const INTERVAL = '1h';
+const SYMBOL = "BTCUSDT";
+const INTERVAL = "1h";
 const SHORT_MA_PERIOD = 7;
 const LONG_MA_PERIOD = 25;
 
@@ -32,7 +32,7 @@ const trade = async () => {
     logger.info(`Selling ${SYMBOL}`);
     // Execute sell order
   } else {
-    logger.info('No trade signal');
+    logger.info("No trade signal");
   }
 };
 

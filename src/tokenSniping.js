@@ -4,7 +4,7 @@ async function snipeToken(tradeDetails) {
         // Logic to snipe tokens using smart contract interactions
         return { success: true, token: tradeDetails.token };
     } catch (error) {
-        console.error('Token sniping error:', error);
+        console.error("Token sniping error:", error);
         return { success: false, error };
     }
 }
